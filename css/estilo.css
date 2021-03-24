@@ -11,3 +11,134 @@ img:hover{
 .container{
 	text-align: center;
 }
+
+.titulo_teia{
+	font-size:28pt;
+	border-bottom:2px solid rgb(62, 55, 124);
+}
+
+.cartao_teia{
+	border:1px solid rgb(62, 55, 124);
+	background:rgba(216, 216, 216, 0.1);
+	border-radius:5px;
+	/* background-color:rgba(255,0,0,0.3) */
+	transition:1s;
+	margin-bottom:10px;
+}
+
+#teia{
+	background:url("../img/cat_Teia4.png");
+	background-size:cover;
+}
+#teia:hover{
+	background:url("../img/teia_bonita.png");
+	/* background-size:550px 350px; */
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+.cartao_teia:hover{
+	box-shadow:0px 0px 10px 5px rgb(62, 55, 124);
+	transition:1s;
+}
+
+.btn_tuite{
+	margin-left:25px;
+	width:90px;
+	color:white;
+	padding:8px;
+	background-color:rgb(142,36,170);
+	border-radius:10px; 
+	background-image: url("../img/icons/tuite.png");
+	background-position: right 7px;
+	background-repeat: no-repeat;
+	background-size: 35px;
+	position: relative;
+	text-align:left;
+	box-shadow: 0px 0px 10px 2px black;
+}
+.btn_yt{
+  margin-left:25px;
+	width:102px;
+	color:white;
+	padding:8px;
+	background-color:red;
+	border-radius:10px;
+	text-align:right;
+	border-radius:10px; 
+	background-image: url("../img/icons/yt.jpeg");
+	background-position: right 5px;
+	background-repeat: no-repeat;
+	background-size: 35px;
+	position: relative;
+	text-align:left;
+	box-shadow: 0px 0px 10px 2px black;
+}
+.btn_insta{
+	margin-left:25px;
+	width:125px;
+	color:white;
+	padding:8px;
+	background-color:purple;
+	border-radius:10px;
+	text-align:right;
+	border-radius:10px; 
+	background-image: url("../img/icons/insta.png");
+	background-position: 85px 5px ;
+	background-repeat: no-repeat;
+	background-size: 30px;
+	position: relative;
+	text-align:left;
+	box-shadow: 0px 0px 10px 2px black;
+}
+.btn_disc{
+	margin-left:25px;
+	width:105px;
+	color:white;
+	padding:8px;
+	background-color:#3333cc;
+	border-radius:10px;
+	text-align:right;
+	border-radius:10px; 
+	background-image: url("../img/icons/discord.webp");
+	background-position: 65px 5px;
+	background-repeat: no-repeat;
+	background-size: 35px;
+	position: relative;
+	text-align:left;
+	box-shadow: 0px 0px 10px 2px black;
+}
+.btn_tuiter{
+	margin-left:25px;
+	width:105px;
+	color:white;
+	padding:8px;
+	background-color:blue;
+	border-radius:10px;
+	text-align:right;
+	border-radius:10px; 
+	background-image: url("../img/icons/tuiter.png");
+	background-position: 65px 5px;
+	background-repeat: no-repeat;
+	background-size: 35px;
+	position: relative;
+	text-align:left;
+	box-shadow: 0px 0px 10px 2px black;
+}
+.btn_face{
+	margin-left:25px;
+	width:125px;
+	color:white;
+	padding:8px;
+	background-color:blue;
+	border-radius:10px;
+	text-align:right;
+	border-radius:10px; 
+	background-image: url("../img/icons/face.webp");
+	background-position: 85px 3px;
+	background-repeat: no-repeat;
+	background-size: 35px;
+	position: relative;
+	text-align:left;
+	box-shadow: 0px 0px 10px 2px black;
+}
