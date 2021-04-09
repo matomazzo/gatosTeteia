@@ -37,6 +37,18 @@ img:hover{
 	background-repeat:no-repeat;
 }
 
+#suprema_linda{
+	background:url("../img/suprema_linda.png");
+	background-size:cover;
+}
+#suprema_linda:hover{
+	background:url("../img/suprema_mais_linda.png");
+	/* background-size:550px 350px; */
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+
 .cartao_teia:hover{
 	box-shadow:0px 0px 10px 5px rgb(62, 55, 124);
 	transition:1s;
