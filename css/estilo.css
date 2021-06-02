@@ -154,3 +154,37 @@ img:hover{
 	text-align:left;
 	box-shadow: 0px 0px 10px 2px black;
 }
+.btn_spotify{
+	margin-left:25px;
+	width:125px;
+	color:white;
+	padding:8px;
+	background-color:green;
+	border-radius:10px;
+	text-align:right;
+	border-radius:10px; 
+	background-image: url("../img/icons/spotify.jpg");
+	background-position: 85px 3px;
+	background-repeat: no-repeat;
+	background-size: 35px;
+	position: relative;
+	text-align:left;
+	box-shadow: 0px 0px 10px 2px black;
+}
+.btn_deezer{
+	margin-left:25px;
+	width:125px;
+	color:white;
+	padding:8px;
+	background-color:magenta;
+	border-radius:10px;
+	text-align:right;
+	border-radius:10px; 
+	background-image: url("../img/icons/deezer.png");
+	background-position: 85px 3px;
+	background-repeat: no-repeat;
+	background-size: 35px;
+	position: relative;
+	text-align:left;
+	box-shadow: 0px 0px 10px 2px black;
+}
