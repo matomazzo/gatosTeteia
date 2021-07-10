@@ -54,6 +54,16 @@ img:hover{
 	transition:1s;
 }
 
+#jupiti{
+	background:url("../img/jp1.png");
+	background-size:cover;
+}
+#jupiti:hover{
+	background:url("../img/jp2.png");
+	/* background-size:550px 350px; */
+	background-repeat:no-repeat;
+}
+
 .btn_tuite{
 	margin-left:25px;
 	width:90px;
