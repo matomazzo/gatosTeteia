@@ -1,622 +1,814 @@
 ﻿<!DOCTYPE html>
-<html>
-	<head>
-		<title>
-			Teteia a loca dos gato
-		</title>
-		
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/estilo.css">
-		<meta charset="UTF-8">
-	</head>
-	
-	<body>
-	
-		<div class="container mx-auto position-relative">
-		
-			<h1> Clique na imagem para ovir o gato miá </h1>
-			
-			<h4> coletânea de sons </h4>
-		
-			<div class="row mx-auto">
-			
-				<div class="col-12">
-				
-					<img onclick="executaAudio1()" src="img/1.jpg">
-					<img onclick="executaAudio2()" src="img/2.jpeg">
-					<img onclick="executaAudio3()" src="img/3.jpeg">
-				
-				</div>
-			
-			</div>
-			<div class="row">
-			
-				<div class="col-12">
-				
-					<img onclick="executaAudio4()" src="img/4.jpeg">
-					<img onclick="executaAudio5()" src="img/5.jpeg">
-					<img onclick="executaAudio6()" src="img/6.jpeg">
-				
-				</div>
-			
-			</div>
-			<div class="row">
-			
-				<div class="col-12">
-				
-					<img onclick="executaAudio7()" src="img/7.jpeg">
-					<img onclick="executaAudio8()" src="img/8.jpeg">
-					<img onclick="executaAudio9()" src="img/9.jpeg">
-				
-				</div>
-			
-			</div>
-			<div class="row">
-			
-				<div class="col-12">
-				
-					<img onclick="executaAudio10()" src="img/10.jpeg">
-					<img onclick="executaAudio11()" src="img/11.jpeg">
-					<img onclick="executaAudio12()" src="img/12.jpeg">
-				
-				</div>
-			
-			</div>
-			<div class="row">
-			
-				<div class="col-12">
-				
-					<img onclick="executaAudio13()" src="img/13.jpeg">
-					<img onclick="executaAudio14()" src="img/14.jpeg">
-					<img onclick="executaAudio15()" src="img/15.jpeg">
-				
-				</div>
-			
-			</div>		
-			<div class="row">
-			
-				<div class="col-12">
-				
-					<img onclick="executaAudio16()" src="img/cat_Teia.png" style="width:450px;" alt="foto da streamer retirada da stream dela https://www.twitch.tv/teteia">
-					<img onclick="executaAudio17()" src="img/cat_Teia2.png" style="width:450px;" alt="foto da streamer suprema retirada da stream dela https://www.twitch.tv/teteia" >
-					<img onclick="executaAudio18()" src="img/cat_Teia3.png" style="width:465px;" alt="foto da streamer suprema retirada da stream dela https://www.twitch.tv/teteia4">
-					<img onclick="executaAudio19()" src="img/cat_Teia4.png" style="width:465px;" alt="foto da streamer suprema retirada da stream delahttps://www.twitch.tv/teteia">
-				
-				</div>
-			
-			</div>	
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teteia a loca dos gato</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .main-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 40px;
+            max-width: 1400px;
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 30px 0;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header-section h4 {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .cat-gallery {
+            margin-bottom: 60px;
+        }
+        
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .cat-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .cat-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        }
+        
+        .cat-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            padding: 0;
+        }
+        
+        .cat-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .special-cats {
+            margin: 40px 0;
+        }
+        
+        .special-cat-item {
+            margin-bottom: 25px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            background: white;
+        }
+        
+        .warning-section {
+            background: linear-gradient(45deg, #ff6b6b, #ffa500);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+        }
+        
+        .streamers-section {
+            margin-top: 60px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #333;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+        
+        .streamer-card {
+            margin-bottom: 30px;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .streamer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .streamer-card .card-body {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .streamer-card .card-text {
+            flex-grow: 1;
+        }
+        
+        .card-img-top {
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .social-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: auto;
+            padding-top: 15px;
+        }
+        
+        .social-btn {
+            flex: 1;
+            min-width: 80px;
+            margin: 0;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .teteia-special {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px 0;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .final-message {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 60px 0 40px 0;
+            color: #333;
+            padding: 30px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Estilos modernos para botões de redes sociais */
+        .social-btn-modern {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: none;
+            color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            margin: 2px;
+        }
+        
+        .social-btn-modern:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            color: white;
+        }
+        
+        .social-btn-modern i {
+            margin-right: 6px;
+            font-size: 1.1rem;
+        }
+        
+        /* Cores específicas para cada plataforma */
+        .btn-twitch { background: linear-gradient(45deg, #9146ff, #772ce8); }
+        .btn-youtube { background: linear-gradient(45deg, #ff0000, #cc0000); }
+        .btn-instagram { background: linear-gradient(45deg, #e4405f, #833ab4, #fcb045); }
+        .btn-twitter { background: linear-gradient(45deg, #1da1f2, #0d8bd9); }
+        .btn-facebook { background: linear-gradient(45deg, #1877f2, #166fe5); }
+        .btn-discord { background: linear-gradient(45deg, #7289da, #5b6eae); }
+        .btn-spotify { background: linear-gradient(45deg, #1db954, #1ed760); }
+        .btn-deezer { background: linear-gradient(45deg, #ff6600, #e55a00); }
+        
+        @media (max-width: 768px) {
+            .main-container {
+                margin: 10px;
+                padding: 20px;
+            }
+            
+            .header-section h1 {
+                font-size: 2rem;
+            }
+            
+            .cat-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 15px;
+            }
+            
+            .social-buttons {
+                justify-content: center;
+            }
+            
+            .social-btn {
+                flex: none;
+                min-width: 100px;
+            }
+            
+            .social-btn-modern {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+            
+            .card-img-top {
+                height: 250px;
+            }
+            
+            .streamer-card .card-body {
+                padding: 20px;
+            }
+            
+            .social-buttons {
+                gap: 6px;
+            }
+        }
+    </style>
+</head>
 
-			<div class="row">
-			
-				<div class="col-12">
-				
-					<img onclick="executaAudio20()" src="img/cat_rafa.png">
-					<img onclick="executaAudio21()" src="img/cat_rafa.png">
-				
-				</div>
-			
-			</div>
-			
-			<div class="row">
-			
-				<div class="col-12">
-				
-					<img onclick="executaAudio22()" src="img/mai_cat1.png">
-					<img onclick="executaAudio23()" src="img/mai_cat2.png">
-					
-					<!-- crush(quem não) -->
-					<img onclick="executaAudio24()" src="img/suprema_cat.png" alt="foto da streamer suprema retirada do instragram dela @supr3m4" title="Ela namora rapá, tira o zói">
-				
-				</div>
-			
-			</div>
-			
-			<div class="row">
-			
-				<div class="col-12">
-				
-					<img onclick="executaAudio25()" src="img/velho_nerd_cat.png">
-					<img onclick="executaAudio26()" src="img/zumanix_cat_novo.png">
-					<img onclick="executaAudio27()" src="img/llolly_cat.png">
-				
-				</div>
-			
-			</div>
-			
-			<!-- <div class="row"> -->
-			
-				<!-- <div class="col-12"> -->
-				
-					<!-- <img onclick="executaAudio28()" src="img/gato_guei.png"> -->
-					<!-- <img onclick="executaAudio29()" src="img/alambradas.png"> -->
-					<!-- <img onclick="executaAudio30()" src="img/kashmir.png" alt="PAGUE A BATATA!!!" title="PAGUE A BATATA"> -->
-				
-				<!-- </div> -->
-			
-			<!-- </div> -->
-			
-			<div class="row">
-			
-				<div class="col-12">
-					<div class="row">
-						<div class="aviso col-3">
-							<img onclick="executaAudio31()" src="img/miau_triggered.png" class="col">
-							<img src="img/alerta.png" style="width:63px;height: 72px;">Sugiro abaixar o som nesse
-						</div>
-						<img onclick="executaAudio32()" src="img/prim_caipira.png" class="col" style="height:350px;">
-						
+<body>
+    <div class="container-fluid">
+        <div class="main-container">
+            
+            <!-- Header Section -->
+            <div class="header-section">
+                <h1>Clique na imagem para ovir o gato miá</h1>
+                <h4>coletânea de sons</h4>
+            </div>
+            
+            <!-- Cat Gallery -->
+            <div class="cat-gallery">
+                <div class="cat-grid">
+                    <div class="cat-item">
+                        <img onclick="executaAudio1()" src="img/1.jpg" alt="Gato 1">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio2()" src="img/2.jpeg" alt="Gato 2">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio3()" src="img/3.jpeg" alt="Gato 3">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio4()" src="img/4.jpeg" alt="Gato 4">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio5()" src="img/5.jpeg" alt="Gato 5">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio6()" src="img/6.jpeg" alt="Gato 6">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio7()" src="img/7.jpeg" alt="Gato 7">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio8()" src="img/8.jpeg" alt="Gato 8">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio9()" src="img/9.jpeg" alt="Gato 9">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio10()" src="img/10.jpeg" alt="Gato 10">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio11()" src="img/11.jpeg" alt="Gato 11">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio12()" src="img/12.jpeg" alt="Gato 12">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio13()" src="img/13.jpeg" alt="Gato 13">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio14()" src="img/14.jpeg" alt="Gato 14">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio15()" src="img/15.jpeg" alt="Gato 15">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Special Cats Section -->
+            <div class="special-cats">
+                <div class="row g-4">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="special-cat-item">
+                            <img onclick="executaAudio16()" src="img/cat_Teia.png" class="img-fluid" alt="foto da streamer retirada da stream dela https://www.twitch.tv/teteia">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="special-cat-item">
+                            <img onclick="executaAudio17()" src="img/cat_Teia2.png" class="img-fluid" alt="foto da streamer suprema retirada da stream dela https://www.twitch.tv/teteia">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="special-cat-item">
+                            <img onclick="executaAudio18()" src="img/cat_Teia3.png" class="img-fluid" alt="foto da streamer suprema retirada da stream dela https://www.twitch.tv/teteia4">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="special-cat-item">
+                            <img onclick="executaAudio19()" src="img/cat_Teia4.png" class="img-fluid" alt="foto da streamer suprema retirada da stream delahttps://www.twitch.tv/teteia">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cat-grid mt-4">
+                    <div class="cat-item">
+                        <img onclick="executaAudio20()" src="img/cat_rafa.png" alt="Cat Rafa 1">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio21()" src="img/cat_rafa.png" alt="Cat Rafa 2">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio22()" src="img/mai_cat1.png" alt="Mai Cat 1">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio23()" src="img/mai_cat2.png" alt="Mai Cat 2">
+                    </div>
+                    <div class="cat-item">
+                        <!-- crush(quem não) -->
+                        <img onclick="executaAudio24()" src="img/suprema_cat.png" alt="foto da streamer suprema retirada do instragram dela" title="Ela namora rapá, tira o zói">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio25()" src="img/velho_nerd_cat.png" alt="Velho Nerd Cat">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio26()" src="img/zumanix_cat_novo.png" alt="Zumanix Cat">
+                    </div>
+                    <div class="cat-item">
+                        <img onclick="executaAudio27()" src="img/llolly_cat.png" alt="Llolly Cat">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Warning Section -->
+            <div class="warning-section">
+                <div class="row align-items-center">
+                    <div class="col-md-3 text-center">
+                        <img onclick="executaAudio31()" src="img/miau_triggered.png" class="img-fluid" style="max-width: 150px; cursor: pointer;">
+                        <div class="mt-2">
+                            <img src="img/alerta.png" style="width:50px;height: 50px;">
+                            <p class="mt-2 mb-0"><strong>Sugiro abaixar o som nesse</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <img onclick="executaAudio32()" src="img/prim_caipira.png" class="img-fluid" style="cursor: pointer; border-radius: 10px;">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More Cats -->
+            <div class="cat-grid">
+                <div class="cat-item">
+                    <img onclick="executaAudio35()" src="img/jupiter_cat.jpg" alt="Ela tem uma beleza de outro mundo" title="Ela tem uma beleza de outro mundo">
+                </div>
+                <div class="cat-item">
+                    <img onclick="executaAudio36()" src="img/peitidio.png" alt="Só os entendedores entenderão(meu p*u na sua mão)" title="Só os entendedores entenderão(meu p*u na sua mão)">
+                </div>
+                <div class="cat-item">
+                    <img onclick="executaAudio37()" src="img/catNemo1.jpg" alt="Nemo Cat">
+                </div>
+                <div class="cat-item">
+                    <img onclick="executaAudio38()" src="img/wall.png" alt="Wall Cat">
+                </div>
+            </div>
+            
+            <!-- Description Section -->
+            <div class="streamers-section">
+                <h2 class="section-title">Este encruavél site foi criado graças a grande ideia de <a href="" class="text-decoration-none">teteia gameplays</a> e aos streamer's que contribuiram doando singelamente vossos miados.</h2>
+                
+                <!-- Teteia Special Card -->
+                <div class="teteia-special">
+                    <div class="row align-items-center">
+                        <div class="col-md-2">
+                            <label class="fs-2 fw-bold mb-3">Tetéia</label>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="muda_foto" id="teia" style="height: 300px; border-radius: 15px;"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="fs-5 mb-3">Este pequeno ser de pouco mais de um metro e meio é recomendado para quem adora bagunçar na twitch.</p>
+                            <p class="fs-5 mb-3" title="Queria escrever mais, mas o espaço é limitado e palavras não descrevem o suficiente vc xuxu">Sem brincadeira agora. Se você está mal, vá ver uma stream dessa maravilhosa pessoa, pensa numa pessoa legal de divertida que fala errado as vezes(mal de streamer coitada, tão jovem) com uma comunidade mais mió de bom ainda, acredito que posso contar com cada um lá, e principalmente com a teteia, onde ela até deu uma sessão particular de psicologa, é isso.</p>
+                            <p class="fs-6 mb-4">Espero q você realize todos seus sonhos teteia.</p>
+                            
+                            <div class="social-buttons">
+                                <a href="https://www.twitch.tv/teteia" class="social-btn-modern btn-twitch" target="_blank"><i class="fab fa-twitch"></i>Twitch</a>
+                                <a href="https://www.youtube.com/channel/UCa1w32hilogy0N4OtunmqPQ" class="social-btn-modern btn-youtube" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
+                                <a href="https://www.instagram.com/iamteteia/" class="social-btn-modern btn-instagram" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+                                <a href="https://discordapp.com/invite/M5XaYEF" class="social-btn-modern btn-discord" target="_blank"><i class="fab fa-discord"></i>Discord</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Streamers Cards -->
+                <div class="row g-4 mt-4">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card streamer-card h-100">
+                            <img src="img/cat_rafa.png" class="card-img-top" alt="FalaRafa">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">FalaRafa</h3>
+                                <p class="card-text flex-grow-1">Até então o mío streamer em efeitos durante a live, parece que ele tem dupla personalidade com um gato com olhos laser e que pega fogo e um cachorro shiba(raça de cachorro) do espaço.</p>
+                                <div class="social-buttons mt-auto">
+                                    <a href="https://www.twitch.tv/falarafaa" class="social-btn-modern btn-twitch" target="_blank"><i class="fab fa-twitch"></i>Twitch</a>
+                                    <a href="https://www.youtube.com/channel/UCUDuyKOzZK_3zrp1uRT2Law" class="social-btn-modern btn-youtube" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
+                                    <a href="https://www.instagram.com/falarafaoficial/" class="social-btn-modern btn-instagram" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+                                    <a href="https://twitter.com/falarafaoficial" class="social-btn-modern btn-twitter" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card streamer-card h-100">
+                            <img src="img/maiara.png" class="card-img-top" alt="Maiaragee">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Maiaragee</h3>
+                                <p class="card-text flex-grow-1">Atualmente ela não tem cabelo azul mais, e faz live e a maioria das lives sem tem algo dando problema, tipo seu carro veio fulera tentando dar partida no frio e remendado com arame.</p>
+                                <div class="social-buttons mt-auto">
+                                    <a href="https://www.twitch.tv/maiaragee" class="social-btn-modern btn-twitch" target="_blank"><i class="fab fa-twitch"></i>Twitch</a>
+                                    <a href="https://www.youtube.com/c/maiaraGee" class="social-btn-modern btn-youtube" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
+                                    <a href="https://www.instagram.com/maiaraGee" class="social-btn-modern btn-instagram" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card streamer-card h-100">
+                            <div class="card-img-top" id="suprema_linda" style="height: 300px;"></div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Supreminha</h3>
+                                <p class="card-text flex-grow-1">O que dizer desta pessoa, posso dizer que tem a melhores feições quando acontece algo na live, dentre muitas outras qualidades ela dança pakas. Recentemente aconteceu uma live do dia 08/04/21 em que conseguiu bater mais uma meta, foi incrivel,vocês deviam ver os brilho nos zói, as lives dela estão cada vez mais incriveis, sugiro que você não perca próxima. (não vou falar mt senão ela fica com vergonha)</p>
+                                <div class="social-buttons mt-auto">
+                                    <a href="https://www.twitch.tv/supreminhaa" class="social-btn-modern btn-twitch" target="_blank"><i class="fab fa-twitch"></i>Twitch</a>
+                                    <a href="https://www.facebook.com/supreminha/" class="social-btn-modern btn-facebook" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
+                                    <a href="https://www.instagram.com/supreminhaa/" class="social-btn-modern btn-instagram" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card streamer-card h-100">
+                            <img src="img/velho_nerd_cat.png" class="card-img-top" alt="NerdVelhoNerd">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">NerdVelhoNerd</h3>
+                                <p class="card-text flex-grow-1">O cara joga jogo antigo, altas nostalgias com ele, papo de nerd também(dá pra ver pelo nome dele né dããã).</p>
+                                <div class="social-buttons mt-auto">
+                                    <a href="https://www.twitch.tv/nerdvelhonerd" class="social-btn-modern btn-twitch" target="_blank"><i class="fab fa-twitch"></i>Twitch</a>
+                                    <a href="https://www.facebook.com/NerdVelhoNerdPagina/" class="social-btn-modern btn-facebook" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
+                                    <a href="https://www.instagram.com/nerdvelhonerd/" class="social-btn-modern btn-instagram" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+                                    <a href="https://discord.gg/DwRwhvv" class="social-btn-modern btn-discord" target="_blank"><i class="fab fa-discord"></i>Discord</a>
+                                    <a href="https://twitter.com/NerdVelhoNerd" class="social-btn-modern btn-twitter" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card streamer-card h-100">
+                            <img src="img/zumanix_cat.PNG" class="card-img-top" alt="Zumanix">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Zumanix</h3>
+                                <p class="card-text flex-grow-1">Uma streamer de portugal super dahora, adorei conversar com ela, a comunidade é muito divertidae zueira.</p>
+                                <div class="social-buttons mt-auto">
+                                    <a href="https://www.twitch.tv/zumanix" class="social-btn-modern btn-twitch" target="_blank"><i class="fab fa-twitch"></i>Twitch</a>
+                                    <a href="https://www.instagram.com/aninhabarbosa00" class="social-btn-modern btn-instagram" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+                                    <a href="https://twitter.com/Zumanix" class="social-btn-modern btn-twitter" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card streamer-card h-100">
+                            <img src="img/llolly_cat.png" class="card-img-top" alt="llolly">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">llolly</h3>
+                                <p class="card-text flex-grow-1">Super gente boa, ela strema para pagar a conta de luz. Infelizmente ela não faz mais live, mas é famosa no mundo de LOL. Em sua live você trabalhará muito a sua paciência devido ao breve delay que acontece, você viverá uma grande expectativa de ter finalmente seu comentário lido por ela e que depois será discutido por muito tempo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card streamer-card h-100">
+                            <img src="img/lucsfdf_ap.png" class="card-img-top" alt="Lucsfdf">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Lucsfdf</h3>
+                                <p class="card-text flex-grow-1">Foi indicação da maiaragee cara é super gente boa, e interage muito com cada um do chat, aparantemente é uma pessoa culta pois tem até foto com uma taça de coquinha bem gelada.</p>
+                                <div class="social-buttons mt-auto">
+                                    <a href="https://www.twitch.tv/lucsfdf" class="social-btn-modern btn-twitch" target="_blank"><i class="fab fa-twitch"></i>Twitch</a>
+                                    <a href="https://www.instagram.com/lucsfdf" class="social-btn-modern btn-instagram" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+                                    <a href="https://twitter.com/lucsfdf" class="social-btn-modern btn-twitter" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
+                                    <a href="https://www.youtube.com/lucsfdf" class="social-btn-modern btn-youtube" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
+                                    <a href="https://discord.com/invite/bbgJzZR" class="social-btn-modern btn-discord" target="_blank"><i class="fab fa-discord"></i>Discord</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card streamer-card h-100">
+                            <img src="img/alambradas.png" class="card-img-top" alt="AlambradasMusic">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">AlambradasMusic</h3>
+                                <p class="card-text flex-grow-1">A streamer que canta super bem pakas, escuta só as musicona que ela tem no espotífai e do dízer, se vai se amarrar, ela tem o gato jaime também e com ctz é uma das melhores viewers q vc pode ter na sua live(além de mim claro huehuehue), se eu fosse um produtor musical já entraria na disputa para que ela gravasse algumas musicas nas produta, afinal uma profissional de alto calibre como ela não se acha assim todo dia.</p>
+                                <div class="social-buttons mt-auto">
+                                    <a href="https://www.twitch.tv/alambradasmusic" class="social-btn-modern btn-twitch" target="_blank"><i class="fab fa-twitch"></i>Twitch</a>
+                                    <a href="https://www.instagram.com/alambradasmusic" class="social-btn-modern btn-instagram" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+                                    <a href="https://open.spotify.com/artist/0tgYwWXq7uXlsIdQiTWXJH" class="social-btn-modern btn-spotify" target="_blank"><i class="fab fa-spotify"></i>Spotify</a>
+                                    <a href="https://www.deezer.com/br/artist/10193738" class="social-btn-modern btn-deezer" target="_blank"><i class="fab fa-deezer"></i>Deezer</a>
+                                    <a href="https://youtube.com/alambradasmusic" class="social-btn-modern btn-youtube" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card streamer-card h-100">
+                            <img src="img/primjoga.png" class="card-img-top" alt="PrimJoga">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">PrimJoga</h3>
+                                <p class="card-text flex-grow-1">O streamer manero, descolado, gente boa, pro player em tetris, é super bom conversar na live dele e com certeza tem o cabelo mais bonito e hidratado que o seu(Deus tem seus preferidos). Ele também canta e é cheio de piadinhas 5 série, é bom passar o tempo nesta live pra ficar derretido, igual nos dias que você ficava na rua dps d jogar bola na rua até tarde da noite, senão aconteceu isso com você, considere então quando vc ficava até altas horas conversando com alguém que gosta. E POR FAVOR num precisa chegar e falar "hur dur se paresse o céu bite hur dur" .</p>
+                                <div class="social-buttons mt-auto">
+                                    <a href="https://www.twitch.tv/primjoga/" class="social-btn-modern btn-twitch" target="_blank"><i class="fab fa-twitch"></i>Twitch</a>
+                                    <a href="https://www.instagram.com/prim_joga" class="social-btn-modern btn-instagram" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+                                    <a href="https://twitter.com/primjoga" class="social-btn-modern btn-twitter" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
+                                    <a href="https://discord.com/invite/6T8BhMY" class="social-btn-modern btn-discord" target="_blank"><i class="fab fa-discord"></i>Discord</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card streamer-card h-100">
+                            <div class="card-img-top" id="jupiti" style="height: 300px;"></div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Jupiter_tn</h3>
+                                <p class="card-text flex-grow-1">Até então a melhor mod q eu conheço da llolly, "Moça bonita, moça bem feita, moça formosa" (Seu madruga, ano desconhecido). Detentora de grandes conhecimentos sobre os dias festivos do ano, esta moça tem uma beleza de outro mundo,literalmente falando, Deus tem seus preferidos né. É cantorah e agrogirl viu beninas e uma boa viewer para se ter no seu chat, ou no caso se vc é um viewer, ela é uma boa pessoa pra ficar conversando. Quer saber como ser legal assim? Arrasta pra cima</p>
+                                <div class="social-buttons mt-auto">
+                                    <a href="https://www.instagram.com/the_crimsoncurse/" class="social-btn-modern btn-instagram" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card streamer-card h-100">
+                            <img src="img/Nemo1.jpg" class="card-img-top" alt="Caralho!!!" title="Caralho">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Nemolas</h3>
+                                <p class="card-text flex-grow-1">Nemolas é um dos viewer's gringo german(que fala inglês, enfim a confusão?) que apareceu aleatoriamente na live(não me lembro) com o passar do time, he foi se enturmando entre we, até soltar o seu clássico e marcante bordão "caralho", desde então o convivio e presença na live da téia tem ajudado bastante ele a compreender nossa languague, ele até sabe falar algumas coisas em portuguese. Graças também ao <a href="https://matomazzo.github.io/Dicioteia/" target="_blank" class="text-decoration-none">Diciotéia</a>, obrigado de nada, thank you very muito. Very bonito né beninas, mas já compromissado já.</p>
+                                <div class="social-buttons mt-auto">
+                                    <a href="https://www.twitch.tv/nemolas" class="social-btn-modern btn-twitch" target="_blank"><i class="fab fa-twitch"></i>Twitch</a>
+                                    <a href="https://www.instagram.com/nemolas.ttv/" class="social-btn-modern btn-instagram" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card streamer-card h-100">
+                            <img src="img/2.png" class="card-img-top" alt="WallBavaria" title="Wall">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">WallBavaria</h3>
+                                <p class="card-text flex-grow-1">Wall ou Uau, é um streamer e manipulador de massas(massa de biscui, sei lá como escreve) que apareceu também de forma suave nas lives, ele é muito humilde e cara de cabra macho parrudo que bebe várias bebidas no bico da garrafa de uma vez só É só elogiar ele que ele vai ficar sem graça e é engraçaddo. Aparece lá mó legal ele, e joga bem pra caramba, quer dizer, o conceito de jogar bem é bem relativo. Mas ele pode te ensinar a beber e fazer vários drinks maneiros. Se você é uma crionça, não faça isso em casa</p>
+                                <div class="social-buttons mt-auto">
+                                    <a href="https://www.twitch.tv/wallbavaria" class="social-btn-modern btn-twitch" target="_blank"><i class="fab fa-twitch"></i>Twitch</a>
+                                    <a href="https://www.instagram.com/anotherbiscuitinthewall//" class="social-btn-modern btn-instagram" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Final Message -->
+            <div class="final-message">
+                Obrigado a cada um de vocês
+            </div>
+        </div>
+    </div>
 
-					</div>
-				</div>
-			
-			</div>
-			
-			<div class="row">
-			
-				<div class="col-12">
-				
-					<img onclick="executaAudio35()" class="col" src="img/jupiter_cat.jpg" alt="Ela tem uma beleza de outro mundo" title="Ela tem uma beleza de outro mundo">
-					<img onclick="executaAudio36()" class="col" src="img/peitidio.png" alt="Só os entendedores entenderão(meu p*u na sua mão)" title="Só os entendedores entenderão(meu p*u na sua mão)">
-			
-			</div>		
-			
-			<div class="row">
-			
-				<div class="col-12">
-					<img onclick="executaAudio37()" src="img/catNemo1.jpg" class="col">
-					<img onclick="executaAudio38()" src="img/wall.png" class="col">
-			</div>
-
-			<div class="row">
-			
-				<div class="col-12">
-				
-					<h4> Este encruavél site foi criado graças a grande ideia de <a href="">teteia gameplays</a> e aos streamer's que contribuiram doando singelamente vossos miados. </h4>
-				
-				</div>
-				
-				<div class="col-12 mt-4">
-				
-					<div class="row cartao_teia">
-					
-						<label class="col-10 my-2 mx-3 text-start titulo_teia" style="margin-bottom:5px;"><b class="">Tetéia</b></label>
-					
-					<div class="col-4 muda_foto" id="teia"></div>
-							
-							<div class="col-8">	
-								
-								<br>
-								<br>
-								<p class="fs-5 text-center">Este pequeno ser de pouco mais de um metro e meio é recomendado para quem adora bagunçar na twitch.</p>
-								<p class="fs-5 text-center" title="Queria escrever mais, mas o espaço é limitado e palavras não descrevem o suficiente vc xuxu">Sem brincadeira agora. Se você está mal, vá ver uma stream dessa maravilhosa pessoa, pensa numa pessoa legal de divertida que fala errado as vezes(mal de streamer 
-								coitada, tão jovem) com uma comunidade mais mió de bom ainda, acredito que posso contar com cada um lá, e principalmente com a teteia, onde ela até deu uma sessão particular de psicologa, é isso.</p>				
-								<p class="fs-6 text-center">Espero q você realize todos seus sonhos teteia.</p>
-							</div>
-							
-								<div class="btn_tuite" style="margin-bottom:50px; margin-top:10px;"><a href="https://www.twitch.tv/teteia" style="color:white; text-decoration:none;" target="_blank">Twitch</a></div>
-								<div class="btn_yt" style="margin-bottom:50px;margin-top:10px;"><a href="https://www.youtube.com/channel/UCa1w32hilogy0N4OtunmqPQ" style="color:white; text-decoration:none;" target="_blank">Youtube</a></div>
-								<div class="btn_insta" style="margin-bottom:50px;margin-top:10px;"><a href="https://www.instagram.com/iamteteia/" style="color:white; text-decoration:none;" target="_blank">Instagram</a></div>
-								<div class="btn_disc" style="margin-bottom:50px;margin-top:10px;"><a href="https://discordapp.com/invite/M5XaYEF" style="color:white; text-decoration:none;" target="_blank">Discord</a></div>
-
-							
-					</div>
-					
-					<div class="row">
-						<div class="col-5">
-							<div class="card col-12">
-							  <img  src="img/cat_rafa.png" class="card-img-top" alt="...">
-							  <div class="card-body">
-								<h3 class="card-title">FalaRafa</h3>
-								<p class="card-text">Até então o mío streamer em efeitos durante a live, parece que ele tem dupla personalidade com um gato com olhos laser e que pega fogo e um cachorro shiba(raça de cachorro) do espaço.</p>
-							
-							<div class="row">
-								<div class="btn_tuite col-5" style="margin-bottom:10px;"><a href="https://www.twitch.tv/falarafaa" style="color:white; text-decoration:none;" target="_blank">Twitch</a></div>
-								<div class="btn_yt" style="margin-bottom:10px;"><a href="https://www.youtube.com/channel/UCUDuyKOzZK_3zrp1uRT2Law" style="color:white; text-decoration:none;" target="_blank">Youtube</a></div>
-								<div class="btn_insta" style="margin-bottom:10px;"><a href="https://www.instagram.com/falarafaoficial/" style="color:white; text-decoration:none;" target="_blank">Instagram</a></div>
-								<div class="btn_tuiter" style="margin-bottom:10px;"><a href="https://twitter.com/falarafaoficial" style="color:white; text-decoration:none;" target="_blank">Twitter</a></div>
-							</div>
-							  </div>
-							</div>
-						</div>		
-						<div class="col-5">
-							<div class="card col-12">
-							  <img src="img/maiara.png" class="card-img-top" alt="...">
-							  <div class="card-body">
-								<h3 class="card-title">Maiaragee</h3>
-								<p class="card-text">Atualmente ela não tem cabelo azul mais, e faz live e a maioria das lives sem tem algo dando problema, tipo seu carro veio fulera tentando dar partida no frio e remendado com arame.</p>
-							
-							<div class="row">
-								<div class="btn_tuite" style="margin-bottom:10px;"><a href="https://www.twitch.tv/maiaragee" style="color:white; text-decoration:none;" target="_blank">Twitch</a></div>
-								<div class="btn_yt" style="margin-bottom:10px;"><a href="https://www.youtube.com/c/maiaraGee" style="color:white; text-decoration:none;" target="_blank">Youtube</a></div>
-								<div class="btn_insta" style="margin-bottom:10px;"><a href="https://www.instagram.com/maiaraGee" style="color:white; text-decoration:none;" target="_blank">Instagram</a></div>
-
-							  </div>
-							</div>
-						</div>
-						
-						</div>
-						
-						<div class="row">
-						
-						<div class="col-5 my-4">
-							<div class="card col-10">
-							  <div class="card-img-top" id="suprema_linda" alt="..." style="height:525px;"></div>
-							  <div class="card-body">
-								<h3 class="card-title">Supr3m4</h3>
-								<p class="card-text">O que dizer desta pessoa, posso dizer que tem a melhores feições quando acontece algo na live, dentre muitas outras qualidades ela dança pakas. Recentemente aconteceu uma live do dia 08/04/21 em que conseguiu bater mais uma meta, foi incrivel,vocês deviam ver os brilho nos zói, as lives dela estão cada vez mais incriveis, sugiro que você não perca próxima. (não vou falar mt senão ela fica com vergonha)</p>
-							
-								<div class="row">
-								<div class="btn_tuite" style="margin-bottom:10px;"><a href="https://www.twitch.tv/supreminhaa" style="color:white; text-decoration:none;" target="_blank">Twitch</a></div>
-								<div class="btn_face" style="margin-bottom:10px;"><a href="https://www.facebook.com/supreminha/" style="color:white; text-decoration:none;" target="_blank">Facebook</a></div>
-								<div class="btn_insta" style="margin-bottom:10px;"><a href="hhttps://www.instagram.com/supreminhaa/" style="color:white; text-decoration:none;" target="_blank">Instagram</a></div>
-								</div>
-							
-							</div>
-								
-							  </div>
-							</div>
-						
-						<div class="col-6 my-4">
-							<div class="card col-">
-							  <img src="img/velho_nerd_cat.png" class="card-img-top" alt="...">
-							  <div class="card-body">
-								<h3 class="card-title">NerdVelhoNerd</h3>
-								<p class="card-text">O cara joga jogo antigo, altas nostalgias com ele, papo de nerd também(dá pra ver pelo nome dele né dããã).</p>
-							
-								<div class="row">
-								<div class="btn_tuite" style="margin-bottom:10px;"><a href="https://www.twitch.tv/nerdvelhonerd" style="color:white; text-decoration:none;" target="_blank">Twitch</a></div>
-								<div class="btn_face" style="margin-bottom:10px;"><a href="https://www.facebook.com/NerdVelhoNerdPagina/" style="color:white; text-decoration:none;" target="_blank">Facebook</a></div>
-								<div class="btn_insta" style="margin-bottom:10px;"><a href="https://www.instagram.com/nerdvelhonerd/" style="color:white; text-decoration:none;" target="_blank">Instagram</a></div>
-								<div class="btn_disc" style="margin-bottom:10px;"><a href="https://discord.gg/DwRwhvv" style="color:white; text-decoration:none;" target="_blank">Discord</a></div>
-								<div class="btn_tuiter" style="margin-bottom:10px;"><a href="https://twitter.com/NerdVelhoNerd" style="color:white; text-decoration:none;" target="_blank">Twitter</a></div>
-								</div>
-								
-							  </div>
-							</div>
-						</div>
-						
-						<div class="col-6 my-4">
-							<div class="card col-">
-							  <img src="img/zumanix_cat.PNG" class="card-img-top" alt="...">
-							  <div class="card-body">
-								<h3 class="card-title">Zumanix</h3>
-								<p class="card-text">Uma streamer de portugal super dahora, adorei conversar com ela, a comunidade é muito divertidae zueira.</p>
-							
-								<div class="row">
-								<div class="btn_tuite" style="margin-bottom:10px;"><a href="https://www.twitch.tv/zumanix" style="color:white; text-decoration:none;" target="_blank">Twitch</a></div>
-								<div class="btn_insta" style="margin-bottom:10px;"><a href="https://www.instagram.com/aninhabarbosa00" style="color:white; text-decoration:none;" target="_blank">Instagram</a></div>
-								<div class="btn_tuiter" style="margin-bottom:10px;"><a href="https://twitter.com/Zumanix" style="color:white; text-decoration:none;" target="_blank">Twitter</a></div>
-								</div>
-								
-							  </div>
-							</div>
-						</div>
-						
-						<div class="col-6 my-4">
-							<div class="card col">
-							  <img src="img/llolly_cat.png" class="card-img-top" alt="...">
-							  <div class="card-body">
-								<h3 class="card-title">llolly</h3>
-								<p class="card-text">Super gente boa, ela strema para pagar a conta de luz. Infelizmente ela não faz mais live, mas é famosa no mundo de LOL. Em sua live você trabalhará muito a sua paciência devido ao breve delay que acontece, você viverá uma grande expectativa de ter finalmente seu comentário lido por ela e que depois será discutido por muito tempo.</p>
-							
-								<div class="row">
-								<!-- <div class="btn_tuite" style="margin-bottom:10px;"><a href="https://www.twitch.tv/zumanix" style="color:white; text-decoration:none;" target="_blank">Twitch</a></div>
-								<div class="btn_insta" style="margin-bottom:10px;"><a href="https://www.instagram.com/aninhabarbosa00" style="color:white; text-decoration:none;" target="_blank">Instagram</a></div>
-								<div class="btn_tuiter" style="margin-bottom:10px;"><a href="https://twitter.com/Zumanix" style="color:white; text-decoration:none;" target="_blank">Twitter</a></div> -->
-								</div>
-								
-							  </div>
-							</div>
-						</div>
-						<div class="col-6 my-4">
-							<div class="card col">
-							  <img src="img/lucsfdf_ap.png" class="card-img-top" style="height:384px !important" alt="...">
-							  <div class="card-body">
-								<h3 class="card-title">Lucsfdf</h3>
-								<p class="card-text">Foi indicação da maiaragee cara é super gente boa, e interage muito com cada um do chat, aparantemente é uma pessoa culta pois tem até foto com uma taça de coquinha bem gelada.</p>
-							
-								<div class="row">
-								<div class="btn_tuite" style="margin-bottom:10px;"><a href="https://www.twitch.tv/lucsfdf" style="color:white; text-decoration:none;" target="_blank">Twitch</a></div>
-								<div class="btn_insta" style="margin-bottom:10px;"><a href="https://www.instagram.com/lucsfdf" style="color:white; text-decoration:none;" target="_blank">Instagram</a></div>
-								<div class="btn_tuiter" style="margin-bottom:10px;"><a href="https://twitter.com/lucsfdf" style="color:white; text-decoration:none;" target="_blank">Twitter</a></div>
-								<div class="btn_yt" style="margin-bottom:10px;"><a href="https://www.youtube.com/lucsfdf" style="color:white; text-decoration:none;" target="_blank">Youtube</a></div>
-								</div>
-								<div class="btn_disc" style="margin-bottom:10px;"><a href="https://discord.com/invite/bbgJzZR" style="color:white; text-decoration:none;" target="_blank">Discord</a></div>
-								
-							  </div>
-							</div>
-						</div>
-						<div class="col-6 my-4">
-							<div class="card col">
-							  <img src="img/alambradas.png" class="card-img-top" style="height:384px !important" alt="...">
-							  <div class="card-body">
-								<h3 class="card-title">AlambradasMusic</h3>
-								<p class="card-text">A streamer que canta super bem pakas, escuta só as musicona que ela tem no espotífai e do dízer, se vai se amarrar, ela tem o gato jaime também e com ctz é uma das melhores viewers q vc pode ter na sua live(além de mim claro huehuehue), se eu fosse um produtor musical já entraria na disputa para que ela gravasse algumas musicas nas produta, afinal uma profissional de alto calibre como ela não se acha assim todo dia.</p>
-							
-								<div class="row">
-								<div class="btn_tuite" style="margin-bottom:10px;"><a href="https://www.twitch.tv/alambradasmusic" style="color:white; text-decoration:none;" target="_blank">Twitch</a></div>
-								<div class="btn_insta" style="margin-bottom:10px;"><a href="https://www.instagram.com/alambradasmusic" style="color:white; text-decoration:none;" target="_blank">Instagram</a></div>
-								<div class="btn_spotify" style="margin-bottom:10px;"><a href="https://open.spotify.com/artist/0tgYwWXq7uXlsIdQiTWXJH" style="color:white; text-decoration:none;" target="_blank">Spotify</a></div>
-								<div class="btn_deezer" style="margin-bottom:10px;"><a href="https://www.deezer.com/br/artist/10193738" style="color:white; text-decoration:none;" target="_blank">Deezer</a></div>
-								<div class="btn_yt" style="margin-bottom:10px;"><a href="https://youtube.com/alambradasmusic" style="color:white; text-decoration:none;" target="_blank">Youtube</a></div>
-								</div>
-
-								
-							  </div>
-							</div>
-						</div>
-						<div class="col-6 my-4">
-							<!-- <div class="card col"> -->
-							  <!-- <img src="img/montagem_batata_final.png" class="card-img-top" style="height:384px !important" alt="PAGUE A BATATA!!!" title="PAGUE A BATATA"> -->
-							  <!-- <div class="card-body"> -->
-								<!-- <h3 class="card-title">kashmiir</h3> -->
-								<!-- <p class="card-text">O streamer speed runner mais rápido do bairro dele quando o assunto é the last tofú 1 e 2. Também speed runner de outros jogos maneiros, o legal não é ver ele jogando assim dizendo, mas sim ver ele morrendo e ficando #chatiado. Por Ultimo eu peço que você NUNCA, NEVER, JAMAIS, NEM PENSE, SEQUER COGITE, IMAGINE, IDEALIZE, ESPERE E POR FIM NEM TENHA TANTA ESPERANÇA que ele irá pagar algo que ele deve você, pergunte pra teteia gameplays sobre uma porção de batata que ela irá te explicar melhor, o que você pode REALMENTE ESPERAR dele é uma live bem divertida, o resto você irá descobrir o quão bom e legal ele é. PAGUE A BATATA KAAAAASH SEU RAGABUNDO.</p> -->
-							
-								<!-- <div class="row"> -->
-								<!-- <div class="btn_tuite" style="margin-bottom:10px;"><a href="https://www.twitch.tv/kashmiir" style="color:white; text-decoration:none;" target="_blank">Twitch</a></div> -->
-								<!-- <div class="btn_insta" style="margin-bottom:10px;"><a href="https://instagram.com/_kashmiir" style="color:white; text-decoration:none;" target="_blank">Instagram</a></div> -->
-								<!-- <div class="btn_tuiter" style="margin-bottom:10px;"><a href="https://twitter.com/_kashmiir" style="color:white; text-decoration:none;" target="_blank">Twitter</a></div> -->
-
-								<!-- <div class="btn_yt" style="margin-bottom:10px;"><a href="https://www.youtube.com/channel/UCEJZDphfWHBIqhBP-fin4bQ?view_as=subscriber" style="color:white; text-decoration:none;" target="_blank">Youtube</a></div> -->
-								<!-- </div> -->
-
-								
-							  <!-- </div> -->
-							<!-- </div> -->
-						</div>
-						
-						<div class="col-6 my-4">
-							<div class="card col">
-							  <img src="img/primjoga.png" class="card-img-top" style="width:610px; height:470px;">
-							  <div class="card-body">
-								<h3 class="card-title">PrimJoga</h3>
-								<p class="card-text">O streamer manero, descolado, gente boa, pro player em tetris, é super bom conversar na live dele e com certeza tem o cabelo mais bonito e hidratado que o seu(Deus tem  seus preferidos). Ele também canta e é cheio de piadinhas 5 série, é bom passar o tempo nesta live pra ficar derretido, igual nos dias que você ficava na rua dps d jogar bola na rua até tarde da noite, senão aconteceu isso com você, considere então quando vc ficava até altas horas conversando com alguém que gosta. E POR FAVOR num precisa chegar e falar "hur dur se paresse o céu bite hur dur" .</p>
-							
-								<div class="row">
-								<div class="btn_tuite" style="margin-bottom:10px;"><a href="https://www.twitch.tv/primjoga/" style="color:white; text-decoration:none;" target="_blank">Twitch</a></div>
-								<div class="btn_insta" style="margin-bottom:10px;"><a href="https://www.instagram.com/prim_joga" style="color:white; text-decoration:none;" target="_blank">Instagram</a></div>
-								<div class="btn_tuiter" style="margin-bottom:10px;"><a href="https://twitter.com/primjoga" style="color:white; text-decoration:none;" target="_blank">Twitter</a></div>
-
-								<div class="btn_disc" style="margin-bottom:10px;"><a href="https://discord.com/invite/6T8BhMY" style="color:white; text-decoration:none;" target="_blank">Discord</a></div>
-								</div>
-
-								
-							  </div>
-							</div>
-						</div>
-						
-						<div class="col-6 my-4">
-							<div class="card col">
-							  <div class="card-img-top" id="jupiti" alt="..." style="height:525px;"></div>
-							  <div class="card-body">
-								<h3 class="card-title">Jupiter_tn</h3>
-								<p class="card-text">Até então a melhor mod q eu conheço da llolly, "Moça bonita, moça bem feita, moça formosa" (Seu madruga, ano desconhecido). Detentora de grandes conhecimentos sobre os dias festivos do ano, esta moça tem uma beleza de outro mundo,literalmente falando, Deus tem seus preferidos né. É cantorah e agrogirl viu beninas e uma boa viewer para se ter no seu chat, ou no caso se vc é um viewer, ela é uma boa pessoa pra ficar conversando. Quer saber como ser legal assim? Arrasta pra cima 
-								<div class="row">
-									<div class="btn_insta" style="margin-bottom:10px;"><a href="https://www.instagram.com/the_crimsoncurse/" style="color:white; text-decoration:none;" target="_blank">Instagram</a></div>
-								</div>
-							  </div>
-							</div>
-						</div>
-						
-						<div class="col-6 my-4">
-							<div class="card col">
-							  <img src="img/Nemo1.jpg" class="card-img-top" style="height:384px !important" alt="Caralho!!!" title="Caralho">
-							  <div class="card-body">
-								<h3 class="card-title">Nemolas</h3>
-								<p class="card-text">Nemolas é um dos viewer's gringo german(que fala inglês, enfim a confusão?) que apareceu aleatoriamente na live(não me lembro) com o passar do time, he foi se enturmando entre we, até soltar o seu clássico e marcante bordão "caralho", desde então o convivio e presença na live da téia tem ajudado bastante ele a compreender nossa languague, ele até sabe falar algumas coisas em portuguese. Graças também ao <a href="https://matomazzo.github.io/Dicioteia/" target="_blank">Diciotéia</a>, obrigado de nada, thank you very muito. Very bonito né beninas, mas já compromissado já.</p>
-							
-								<div class="row">
-								<div class="btn_tuite" style="margin-bottom:10px;"><a href="https://www.twitch.tv/nemolas" style="color:white; text-decoration:none;" target="_blank">Twitch</a></div>
-								<div class="btn_insta" style="margin-bottom:10px;"><a href="https://www.instagram.com/nemolas.ttv/" style="color:white; text-decoration:none;" target="_blank">Instagram</a></div>
-			
-								</div>
-
-								
-							  </div>
-							</div>
-						</div>
-												
-						<div class="col-6 my-4">
-							<div class="card col">
-							  <img src="img/2.png" class="card-img-top" style="height:384px !important" alt="Caralho!!!" title="Caralho">
-							  <div class="card-body">
-								<h3 class="card-title">WallBavaria</h3>
-								<p class="card-text">Wall ou Uau, é um streamer e manipulador de massas(massa de biscui, sei lá como escreve) que apareceu também de forma suave nas lives, ele é muito humilde e cara de cabra macho parrudo que bebe várias bebidas no bico da garrafa de uma vez só
-									É só elogiar ele que ele vai ficar sem graça e é engraçaddo. Aparece lá mó legal ele, e joga bem pra caramba, quer dizer, o conceito de jogar bem é bem relativo. Mas ele pode te ensinar a beber e fazer vários drinks maneiros. Se você é uma crionça, não faça isso em casa
-
-								</p>
-							
-								<div class="row">
-								<div class="btn_tuite" style="margin-bottom:10px;"><a href="https://www.twitch.tv/wallbavaria" style="color:white; text-decoration:none;" target="_blank">Twitch</a></div>
-								<div class="btn_insta" style="margin-bottom:10px;"><a href="https://www.instagram.com/anotherbiscuitinthewall//" style="color:white; text-decoration:none;" target="_blank">Instagram</a></div>
-			
-								</div>
-
-								
-							  </div>
-							</div>
-						</div>
-												
-						
-						</div>
-						
-					</div>
-				
-				</div>
-				
-				<h1 class="text-center">Obrigado a cada um de vocês</h1>
-			
-		</div>
-
-	</body>
-
+    <script>
+        function executaAudio1() {
+            var audio = new Audio('audio/audio1.mp4');
+            audio.play();
+        }
+        function executaAudio2() {
+            var audio = new Audio('audio/audio2.mp4');
+            audio.play();
+        }
+        function executaAudio3() {
+            var audio = new Audio('audio/audio4.mp4');
+            audio.play();
+        }
+        function executaAudio4() {
+            var audio = new Audio('audio/audio5.mp4');
+            audio.play();
+        }
+        function executaAudio5() {
+            var audio = new Audio('audio/audio6.mp4');
+            audio.play();
+        }
+        function executaAudio6() {
+            var audio = new Audio('audio/audio3.mp4');
+            audio.play();
+        }
+        function executaAudio7() {
+            var audio = new Audio('audio/audio7.mp4');
+            audio.play();
+        }
+        function executaAudio8() {
+            var audio = new Audio('audio/audio8.mp4');
+            audio.play();
+        }
+        function executaAudio9() {
+            var audio = new Audio('audio/audio9.mp4');
+            audio.play();
+        }
+        function executaAudio10() {
+            var audio = new Audio('audio/audio10.mp4');
+            audio.play();
+        }
+        function executaAudio11() {
+            var audio = new Audio('audio/audio11.mp4');
+            audio.play();
+        }
+        function executaAudio12() {
+            var audio = new Audio('audio/audio12.mp4');
+            audio.play();
+        }
+        function executaAudio13() {
+            var audio = new Audio('audio/audio13.mp4');
+            audio.play();
+        }
+        function executaAudio14() {
+            var audio = new Audio('audio/audio14.mp4');
+            audio.play();
+        }
+        function executaAudio15() {
+            var audio = new Audio('audio/audio15.mp4');
+            audio.play();
+        }
+        function executaAudio16() {
+            var audio = new Audio('audio/miadoTeia.mp4');
+            audio.play();
+        }
+        function executaAudio17() {
+            var audio = new Audio('audio/miadoTeia2.mp4');
+            audio.play();
+        }
+        function executaAudio18() {
+            var audio = new Audio('audio/miadoTeia3.mp4');
+            audio.play();
+        }
+        function executaAudio19() {
+            var audio = new Audio('audio/miadoTeia4.mp4');
+            audio.play();
+        }
+        function executaAudio20() {
+            var audio = new Audio('audio/cat_rafa1.mp4');
+            audio.play();
+        }
+        function executaAudio21() {
+            var audio = new Audio('audio/cat_rafa2.mp4');
+            audio.play();
+        }
+        function executaAudio22() {
+            var audio = new Audio('audio/mai_cat.mp4');
+            audio.play();
+        }
+        function executaAudio23() {
+            var audio = new Audio('audio/mai_cat2.mp4');
+            audio.play();
+        }
+        function executaAudio24() {
+            var audio = new Audio('audio/suprema_cat_novo.mp4');
+            audio.play();
+        }
+        function executaAudio25() {
+            var audio = new Audio('audio/velho_nerd_miau.mp4');
+            audio.play();
+        }
+        function executaAudio26() {
+            var audio = new Audio('audio/zumanix_miau.mp4');
+            audio.play();
+        }
+        function executaAudio27() {
+            var audio = new Audio('audio/lloly_cat.mp4');
+            audio.play();
+        }
+        function executaAudio28() {
+            var audio = new Audio('audio/Lucsfdf_miau.mp4');
+            audio.play();
+        }
+        function executaAudio29() {
+            var audio = new Audio('audio/alambradas_miau.mp4');
+            audio.play();
+        }
+        function executaAudio30() {
+            var audio = new Audio('audio/queshimir_miau.mp4');
+            audio.play();
+        }
+        function executaAudio31() {
+            var audio = new Audio('audio/miau_triggered.mp3');
+            audio.play();
+        }
+        function executaAudio32() {
+            var audio = new Audio('audio/miar.mp3');
+            audio.play();
+        }
+        function executaAudio33() {
+            var audio = new Audio('audio/bah_maestro.mp3');
+            audio.play();
+        }
+        function executaAudio34() {
+            var audio = new Audio('audio/bah_mario.mp3');
+            audio.play();
+        }
+        function executaAudio35() {
+            var audio = new Audio('audio/jupiti_miau_au_au.mp3');
+            audio.play();
+        }
+        function executaAudio36() {
+            var audio = new Audio('audio/peitidio.mp3');
+            audio.play();
+        }
+        function executaAudio37() {
+            var audio = new Audio('audio/caraleow.mp3');
+            audio.play();
+        }
+        function executaAudio38() {
+            var audio = new Audio('audio/wall miano.mp3');
+            audio.play();
+        }
+        
+        function muda_foto1(){
+            document.getElementById("teia").style.backgroundImage = "url('img/teia_bonita.png')"; 
+        }
+    </script>
+    
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
-
-<script>
-	function executaAudio1() {
-		  var audio = new Audio('audio/audio1.mp4');
-	  audio.play();
-	}
-	function executaAudio2() {
-		  var audio = new Audio('audio/audio2.mp4');
-	  audio.play();
-	}
-	function executaAudio3() {
-		  var audio = new Audio('audio/audio4.mp4');
-	  audio.play();
-	}
-	function executaAudio4() {
-		  var audio = new Audio('audio/audio5.mp4');
-	  audio.play();
-	}
-	function executaAudio5() {
-		  var audio = new Audio('audio/audio6.mp4');
-	  audio.play();
-	}
-	function executaAudio6() {
-		  var audio = new Audio('audio/audio3.mp4');
-	  audio.play();
-	}
-	function executaAudio7() {
-		  var audio = new Audio('audio/audio7.mp4');
-	  audio.play();
-	}
-	function executaAudio8() {
-		  var audio = new Audio('audio/audio8.mp4');
-	  audio.play();
-	}
-	function executaAudio9() {
-		  var audio = new Audio('audio/audio9.mp4');
-	  audio.play();
-	}
-	function executaAudio10() {
-		  var audio = new Audio('audio/audio10.mp4');
-	  audio.play();
-	}
-	function executaAudio11() {
-		  var audio = new Audio('audio/audio11.mp4');
-	  audio.play();
-	}
-	function executaAudio12() {
-		  var audio = new Audio('audio/audio12.mp4');
-	  audio.play();
-	}
-	function executaAudio13() {
-		  var audio = new Audio('audio/audio13.mp4');
-	  audio.play();
-	}
-	function executaAudio14() {
-		  var audio = new Audio('audio/audio14.mp4');
-	  audio.play();
-	}
-	function executaAudio15() {
-		  var audio = new Audio('audio/audio15.mp4');
-	  audio.play();
-	}	
-	function executaAudio16() {
-		  var audio = new Audio('audio/miadoTeia.mp4');
-	  audio.play();
-	}	
-	function executaAudio17() {
-		  var audio = new Audio('audio/miadoTeia2.mp4');
-	  audio.play();
-	}
-	function executaAudio18() {
-		  var audio = new Audio('audio/miadoTeia3.mp4');
-	  audio.play();
-	}
-	function executaAudio19() {
-		  var audio = new Audio('audio/miadoTeia4.mp4');
-	  audio.play();
-	}	
-	function executaAudio20() {
-		  var audio = new Audio('audio/cat_rafa1.mp4');
-	  audio.play();
-	  }
-	function executaAudio21() {
-		  var audio = new Audio('audio/cat_rafa2.mp4');
-	  audio.play();
-	}
-
-	function executaAudio22() {
-		  var audio = new Audio('audio/mai_cat.mp4');
-	  audio.play();
-	}
-	
-	function executaAudio23() {
-		  var audio = new Audio('audio/mai_cat2.mp4');
-	  audio.play();
-	}	
-	
-	function executaAudio24() {
-		  var audio = new Audio('audio/suprema_cat_novo.mp4');
-	  audio.play();
-	}
-	function executaAudio25() {
-		  var audio = new Audio('audio/velho_nerd_miau.mp4');
-	  audio.play();
-	}
-	function executaAudio26() {
-		  var audio = new Audio('audio/zumanix_miau.mp4');
-	  audio.play();
-	}
-	function executaAudio27() {
-		  var audio = new Audio('audio/lloly_cat.mp4');
-	  audio.play();
-	}
-	
-	function executaAudio28() {
-		  var audio = new Audio('audio/Lucsfdf_miau.mp4');
-	  audio.play();
-	}
-	function executaAudio29() {
-		  var audio = new Audio('audio/alambradas_miau.mp4');
-	  audio.play();
-	}
-	function executaAudio30() {
-		  var audio = new Audio('audio/queshimir_miau.mp4');
-	  audio.play();
-	}
-	function executaAudio31() {
-		  var audio = new Audio('audio/miau_triggered.mp3');
-	  audio.play();
-	}
-	function executaAudio32() {
-		  var audio = new Audio('audio/miar.mp3');
-	  audio.play();
-	}
-	
-	function executaAudio33() {
-		  var audio = new Audio('audio/bah_maestro.mp3');
-	  audio.play();
-	}
-	
-	function executaAudio34() {
-		  var audio = new Audio('audio/bah_mario.mp3');
-	  audio.play();
-	}
-	
-	function executaAudio35() {
-		  var audio = new Audio('audio/jupiti_miau_au_au.mp3');
-	  audio.play();
-	}
-	
-	function executaAudio36() {
-		  var audio = new Audio('audio/peitidio.mp3');
-	  audio.play();
-	}
-	
-	function executaAudio37() {
-		  var audio = new Audio('audio/caraleow.mp3');
-	  audio.play();
-	}
-	function executaAudio38() {
-		  var audio = new Audio('audio/wall miano.mp3');
-	  audio.play();
-	}
-	
-	function muda_foto1(){
-		document.getElementById("teia").style.backgroundImage = "url('img/teia_bonita.png')"; 
-	}
-
-</script>
