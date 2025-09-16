@@ -94,6 +94,25 @@
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             background: white;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .special-cat-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        }
+        
+        .special-cat-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .special-cat-item:hover img {
+            transform: scale(1.05);
         }
         
         .warning-section {
@@ -280,6 +299,10 @@
             .social-buttons {
                 gap: 6px;
             }
+            
+            .special-cat-item img {
+                height: 250px;
+            }
         }
     </style>
 </head>
@@ -348,22 +371,22 @@
             <!-- Special Cats Section -->
             <div class="special-cats">
                 <div class="row g-4">
-                    <div class="col-lg-6 col-md-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="special-cat-item">
-                            <img onclick="executaAudio16()" src="img/cat_Teia.png" class="img-fluid" alt="foto da streamer retirada da stream dela https://www.twitch.tv/teteia">
+                            <img onclick="executaAudio16()" src="img/cat_Teia.png" class="" alt="foto da streamer retirada da stream dela https://www.twitch.tv/teteia">
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="special-cat-item">
                             <img onclick="executaAudio17()" src="img/cat_Teia2.png" class="img-fluid" alt="foto da streamer suprema retirada da stream dela https://www.twitch.tv/teteia">
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="special-cat-item">
                             <img onclick="executaAudio18()" src="img/cat_Teia3.png" class="img-fluid" alt="foto da streamer suprema retirada da stream dela https://www.twitch.tv/teteia4">
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="special-cat-item">
                             <img onclick="executaAudio19()" src="img/cat_Teia4.png" class="img-fluid" alt="foto da streamer suprema retirada da stream delahttps://www.twitch.tv/teteia">
                         </div>
