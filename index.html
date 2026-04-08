@@ -59,7 +59,6 @@
         
         .cat-item {
             position: relative;
-            overflow: hidden;
             border-radius: 15px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
             transition: all 0.3s ease;
@@ -73,7 +72,7 @@
         
         .cat-item img {
             width: 100%;
-            height: 280px;
+            height: 100%;
             object-fit: cover;
             cursor: pointer;
             transition: transform 0.3s ease;
@@ -413,9 +412,9 @@
                         <!-- crush(quem não) -->
                         <img onclick="executaAudio24()" src="img/suprema_cat.png" alt="foto da streamer suprema retirada do instragram dela" title="Ela namora rapá, tira o zói">
                     </div>
-                    <div class="cat-item">
+                    <!-- <div class="cat-item">
                         <img onclick="executaAudio25()" src="img/velho_nerd_cat.png" alt="Velho Nerd Cat">
-                    </div>
+                    </div> -->
                     <div class="cat-item">
                         <img onclick="executaAudio26()" src="img/zumanix_cat_novo.png" alt="Zumanix Cat">
                     </div>
@@ -455,11 +454,18 @@
                 <div class="cat-item">
                     <img onclick="executaAudio38()" src="img/wall.png" alt="Wall Cat">
                 </div>
+                
+                <div class="cat-item">
+                    <img onclick="executaAudio39()" src="img/wall.png" alt="Wall Cat">
+                </div>
+                <div class="cat-item">
+                    <img onclick="executaAudio40()" src="img/Jovem com fones de ouvido rosa.png" alt="Wall Cat">
+                </div>
             </div>
             
             <!-- Description Section -->
             <div class="streamers-section">
-                <h2 class="section-title">Este encruavél site foi criado graças a grande ideia de <a href="" class="text-decoration-none">teteia gameplays</a> e aos streamer's que contribuiram doando singelamente vossos miados.</h2>
+                <h2 class="section-title">Este incrivel site foi criado graças a grande ideia de <a href="" class="text-decoration-none">teteia gameplays</a> e aos streamer's que contribuiram doando singelamente vossos miados.</h2>
                 
                 <!-- Teteia Special Card -->
                 <div class="teteia-special">
@@ -492,7 +498,7 @@
                             <img src="img/cat_rafa.png" class="card-img-top" alt="FalaRafa">
                             <div class="card-body d-flex flex-column">
                                 <h3 class="card-title">FalaRafa</h3>
-                                <p class="card-text flex-grow-1">Até então o mío streamer em efeitos durante a live, parece que ele tem dupla personalidade com um gato com olhos laser e que pega fogo e um cachorro shiba(raça de cachorro) do espaço.</p>
+                                <p class="card-text flex-grow-1">Atualmente não faz mais lives, mas faz várias reviews de periféricos, sua live era marcada por mts efeitos caóticos uma serie própria sobre os shibas galáticos(personagem da live que é um cachorro e um gato flamejante que solta laser pelos olhos) e jogos retrô.</p>
                                 <div class="social-buttons mt-auto">
                                     <a href="https://www.twitch.tv/falarafaa" class="social-btn-modern btn-twitch" target="_blank"><i class="fab fa-twitch"></i>Twitch</a>
                                     <a href="https://www.youtube.com/channel/UCUDuyKOzZK_3zrp1uRT2Law" class="social-btn-modern btn-youtube" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
@@ -508,7 +514,7 @@
                             <img src="img/maiara.png" class="card-img-top" alt="Maiaragee">
                             <div class="card-body d-flex flex-column">
                                 <h3 class="card-title">Maiaragee</h3>
-                                <p class="card-text flex-grow-1">Atualmente ela não tem cabelo azul mais, e faz live e a maioria das lives sem tem algo dando problema, tipo seu carro veio fulera tentando dar partida no frio e remendado com arame.</p>
+                                <p class="card-text flex-grow-1">Atualmente ela não tem cabelo azul mais, e está com pausa nas lives, a maioria das lives sem tem algo dando problema, tipo seu carro veio fulera tentando dar partida no frio e remendado com arame. Atualmente ela tem uma motona e posta video com sua motona royal enfield amarela</p>
                                 <div class="social-buttons mt-auto">
                                     <a href="https://www.twitch.tv/maiaragee" class="social-btn-modern btn-twitch" target="_blank"><i class="fab fa-twitch"></i>Twitch</a>
                                     <a href="https://www.youtube.com/c/maiaraGee" class="social-btn-modern btn-youtube" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
@@ -520,10 +526,10 @@
                     
                     <div class="col-lg-6 col-md-12">
                         <div class="card streamer-card h-100">
-                            <div class="card-img-top" id="suprema_linda" style="height: 900px;"></div>
+                            <img src="img/suprema_cat.png" class="card-img-top">
                             <div class="card-body d-flex flex-column">
                                 <h3 class="card-title">Supreminha</h3>
-                                <p class="card-text flex-grow-1">O que dizer desta pessoa, posso dizer que tem a melhores feições quando acontece algo na live, dentre muitas outras qualidades ela dança pakas. Recentemente aconteceu uma live do dia 08/04/21 em que conseguiu bater mais uma meta, foi incrivel,vocês deviam ver os brilho nos zói, as lives dela estão cada vez mais incriveis, sugiro que você não perca próxima. (não vou falar mt senão ela fica com vergonha)</p>
+                                <p class="card-text flex-grow-1">Ela namora o kojima e faz live de noite, muito famosa por fazer cosplays e maquiagens muito realistas e fodas
                                 <div class="social-buttons mt-auto">
                                     <a href="https://www.twitch.tv/supreminhaa" class="social-btn-modern btn-twitch" target="_blank"><i class="fab fa-twitch"></i>Twitch</a>
                                     <a href="https://www.facebook.com/supreminha/" class="social-btn-modern btn-facebook" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
@@ -532,23 +538,7 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="col-lg-6 col-md-12">
-                        <div class="card streamer-card h-100">
-                            <img src="img/velho_nerd_cat.png" class="card-img-top" alt="NerdVelhoNerd">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="card-title">NerdVelhoNerd</h3>
-                                <p class="card-text flex-grow-1">O cara joga jogo antigo, altas nostalgias com ele, papo de nerd também(dá pra ver pelo nome dele né dããã).</p>
-                                <div class="social-buttons mt-auto">
-                                    <a href="https://www.twitch.tv/nerdvelhonerd" class="social-btn-modern btn-twitch" target="_blank"><i class="fab fa-twitch"></i>Twitch</a>
-                                    <a href="https://www.facebook.com/NerdVelhoNerdPagina/" class="social-btn-modern btn-facebook" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
-                                    <a href="https://www.instagram.com/nerdvelhonerd/" class="social-btn-modern btn-instagram" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
-                                    <a href="https://discord.gg/DwRwhvv" class="social-btn-modern btn-discord" target="_blank"><i class="fab fa-discord"></i>Discord</a>
-                                    <a href="https://twitter.com/NerdVelhoNerd" class="social-btn-modern btn-twitter" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                
                     
                     <div class="col-lg-6 col-md-12">
                         <div class="card streamer-card h-100">
@@ -570,7 +560,7 @@
                             <img src="img/llolly_cat.png" class="card-img-top" alt="llolly">
                             <div class="card-body d-flex flex-column">
                                 <h3 class="card-title">llolly</h3>
-                                <p class="card-text flex-grow-1">Super gente boa, ela strema para pagar a conta de luz. Infelizmente ela não faz mais live, mas é famosa no mundo de LOL. Em sua live você trabalhará muito a sua paciência devido ao breve delay que acontece, você viverá uma grande expectativa de ter finalmente seu comentário lido por ela e que depois será discutido por muito tempo.</p>
+                                <p class="card-text flex-grow-1">Infelizmente ela não faz mais live, mas é famosa no mundo de LOL. lives longas de noite muito boa para conversar.</p>
                             </div>
                         </div>
                     </div>
@@ -627,7 +617,7 @@
                     
                     <div class="col-lg-6 col-md-12">
                         <div class="card streamer-card h-100">
-                            <div class="card-img-top" id="jupiti" style="height: 300px;"></div>
+                            <div class="card-img-top" id="jupiti" style="height: 100%;"></div>
                             <div class="card-body d-flex flex-column">
                                 <h3 class="card-title">Jupiter_tn</h3>
                                 <p class="card-text flex-grow-1">Até então a melhor mod q eu conheço da llolly, "Moça bonita, moça bem feita, moça formosa" (Seu madruga, ano desconhecido). Detentora de grandes conhecimentos sobre os dias festivos do ano, esta moça tem uma beleza de outro mundo,literalmente falando, Deus tem seus preferidos né. É cantorah e agrogirl viu beninas e uma boa viewer para se ter no seu chat, ou no caso se vc é um viewer, ela é uma boa pessoa pra ficar conversando. Quer saber como ser legal assim? Arrasta pra cima</p>
@@ -638,12 +628,12 @@
                         </div>
                     </div>
                     
-                    <div class="col-lg-6 col-md-12">
+                    <div class="col-lg-5 col-md-12">
                         <div class="card streamer-card h-100">
                             <img src="img/Nemo1.jpg" class="card-img-top" alt="Caralho!!!" title="Caralho">
                             <div class="card-body d-flex flex-column">
                                 <h3 class="card-title">Nemolas</h3>
-                                <p class="card-text flex-grow-1">Nemolas é um dos viewer's gringo german(que fala inglês, enfim a confusão?) que apareceu aleatoriamente na live(não me lembro) com o passar do time, he foi se enturmando entre we, até soltar o seu clássico e marcante bordão "caralho", desde então o convivio e presença na live da téia tem ajudado bastante ele a compreender nossa languague, ele até sabe falar algumas coisas em portuguese. Graças também ao <a href="https://matomazzo.github.io/Dicioteia/" target="_blank" class="text-decoration-none">Diciotéia</a>, obrigado de nada, thank you very muito. Very bonito né beninas, mas já compromissado já.</p>
+                                <p class="card-text flex-grow-1">Nemo era um viewer gringo que estava na era do Twitch sings, ele cantava bem e estava aprendendo portugues, agora depois de casar e ter filhos sumiu, aparentemente ele só aprender a palavra "caraio" em portugues, sim, aquela parte do barco</p>
                                 <div class="social-buttons mt-auto">
                                     <a href="https://www.twitch.tv/nemolas" class="social-btn-modern btn-twitch" target="_blank"><i class="fab fa-twitch"></i>Twitch</a>
                                     <a href="https://www.instagram.com/nemolas.ttv/" class="social-btn-modern btn-instagram" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
@@ -652,12 +642,12 @@
                         </div>
                     </div>
                     
-                    <div class="col-lg-6 col-md-12">
+                    <div class="col-lg-5 col-md-12">
                         <div class="card streamer-card h-100">
                             <img src="img/2.png" class="card-img-top" alt="WallBavaria" title="Wall">
                             <div class="card-body d-flex flex-column">
                                 <h3 class="card-title">WallBavaria</h3>
-                                <p class="card-text flex-grow-1">Wall ou Uau, é um streamer e manipulador de massas(massa de biscui, sei lá como escreve) que apareceu também de forma suave nas lives, ele é muito humilde e cara de cabra macho parrudo que bebe várias bebidas no bico da garrafa de uma vez só É só elogiar ele que ele vai ficar sem graça e é engraçaddo. Aparece lá mó legal ele, e joga bem pra caramba, quer dizer, o conceito de jogar bem é bem relativo. Mas ele pode te ensinar a beber e fazer vários drinks maneiros. Se você é uma crionça, não faça isso em casa</p>
+                                <p class="card-text flex-grow-1">Wall ou Uau, é um streamer e manipulador de massas(massa de biscui, sei lá como escreve) que apareceu também de forma suave nas lives, ele é muito humilde e cara de cabra macho parrudo que bebe várias bebidas no bico da garrafa de uma vez só. É só elogiar ele que ele vai ficar sem graça e é engraçaddo. Aparece lá mó legal ele, e joga bem pra caramba, quer dizer, o conceito de jogar bem é bem relativo. Não ele não parece o lula das eleições de 89</p>
                                 <div class="social-buttons mt-auto">
                                     <a href="https://www.twitch.tv/wallbavaria" class="social-btn-modern btn-twitch" target="_blank"><i class="fab fa-twitch"></i>Twitch</a>
                                     <a href="https://www.instagram.com/anotherbiscuitinthewall//" class="social-btn-modern btn-instagram" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
@@ -826,6 +816,17 @@
         }
         function executaAudio38() {
             var audio = new Audio('audio/wall miano.mp3');
+            audio.play();
+        }
+        
+        function executaAudio39() {
+            var audio = new Audio('audio/wall_gato_triste1.mp3');
+            audio.play();
+        }
+        
+        
+        function executaAudio40() {
+            var audio = new Audio('audio/wallgato_realmente_triste.mp3');
             audio.play();
         }
         
